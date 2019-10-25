@@ -1,4 +1,4 @@
-# Name
+# Spring OAuth 2.0 Resource Server and UAA
 
 Overview
 
