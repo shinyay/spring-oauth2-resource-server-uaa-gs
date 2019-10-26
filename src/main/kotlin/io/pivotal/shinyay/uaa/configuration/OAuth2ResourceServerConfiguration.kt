@@ -7,6 +7,13 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableWebSecurity
 class OAuth2ResourceServerConfiguration : WebSecurityConfigurerAdapter() {
     override fun configure(http: HttpSecurity?) {
-        super.configure(http)
+        http?.authorizeRequests()
+                ?.antMatchers("/read/**")?.hasAuthority("SCOPE_resource.read")
+                ?.antMatchers("/write/**")?.hasAuthority("SCOPE_resource.write")
+                ?.anyRequest()
+                ?.authenticated()
+                ?.and()
+                ?.oauth2ResourceServer()
+                ?.jwt()
     }
 }
