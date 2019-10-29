@@ -2,6 +2,11 @@
 
 ![](images/oauth_web_server_flow.png)
 
+- Server Port
+  - 8080: Authorization Server (UAA)
+  - 8081: OAuth2 Client
+  - 8082: OAuth2 Resource Server
+
 - [Spring OAuth 2.0 Client and UAA](https://github.com/shinyay/spring-oauth2-uaa-getting-started)
 
 ## Description
